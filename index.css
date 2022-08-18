@@ -1,4 +1,16 @@
 /* ------------------ */
+/* Custom properties */
+/* --------------------- */
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+}
+
+
+
+
+/* ------------------ */
 /* Reset */
 /* ------------------ */
 
@@ -72,4 +84,59 @@ textarea {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ------------------- */
+/* Utility Classes */
+/* ------------------- */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 2em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Colors */
+.bg-dark { background-color: hsl(var(--clr-dark));}
+.bg-accent { background-color: hsl(var(--clr-light));}
+.bg-white { background-color: hsl(var(--clr-white));}
+
+.text-dark { color: hsl(var(--clr-dark));}
+.text-accent { color: hsl(var(--clr-light));}
+.text-white { color: hsl(var(--clr-white));}
+
+.first-section{
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-title {
+  align-self: flex-start;
+  margin-left: 18%;
+}
+
+#colors-div {
+  padding: 3rem 15rem 1rem 1rem;
+  border: 1px solid white;
 }
