@@ -195,8 +195,8 @@ select {
 
 .large-button {
     position: relative;
-    display: grid;
     z-index: 1;
+    display: grid;
     place-items: center;
     padding: 0 2em;
     border-radius: 50%;
@@ -208,16 +208,56 @@ select {
     content: '';
     position: absolute;
     z-index: -1;
-    background: hsl( var(--clr-white) / .15);
     width: 100%;
     height: 100%;
+    background: hsl( var(--clr-white) / .1);
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 500ms linear, transform 500ms ease-in-out;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
 }
-
+ 
 .large-button:hover::after,
 .large-button:focus::after {
-  opacity: 1;
-  transform: scale(1.5);
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.primary-navigation {
+    --gap: 8rem;
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
+}
+
+.underline-indicators > * {
+    cursor: pointer;
+    padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true" ]{
+    color: hsl( var(--clr-white) / 1);
+    border-color: hsl( var(--clr-white) / 1);
+}
+
+.tab-list {
+    --gap: 2rem;
+
 }
