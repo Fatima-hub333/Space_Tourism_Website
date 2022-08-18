@@ -251,7 +251,9 @@ textarea {
 }
 
 .underline-indicators > *{
+  cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
+  border: 0;
   border-bottom: 2px solid hsl(var(--clr-white) / 0);
 }
 
@@ -260,11 +262,15 @@ textarea {
   border-bottom: 2px solid hsl(var(--clr-white) / .5);
 }
 
-.underline-indicators > .active {
+.underline-indicators > .active,
+.underline-indicators > [area-selected="true"] {
+  color: hsl(var(--clr-white) / 1);
   border-bottom: 2px solid hsl(var(--clr-white) / 1);
 }
 
-
+.tab-list {
+  --gap: 3rem;
+}
 
 
 
