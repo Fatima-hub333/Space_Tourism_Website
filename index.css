@@ -191,8 +191,10 @@ textarea {
   letter-spacing: 4.72px;
 }
 
-.numbered-title > span {
-  
+.numbered-title span {
+  margin-right: .5em;
+  font-weight: 700;
+  color: hsl(var(--clr-white)/ .25);
 }
 
 
