@@ -125,7 +125,7 @@ textarea {
   gap: var(--gap, 1rem);
 }
 
-.flow * + *{
+.flow > * + *{
   margin-top: var(--flow-space, 1rem);
 }
 
@@ -201,8 +201,68 @@ textarea {
   color: hsl(var(--clr-white)/ .25);
 }
 
+/* -------------------- */
+/* Components */
+/* -------------------- */
+.large-button {
+  display: grid;
+  position: relative;
+  padding: 0 2em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  place-items: center;
+  text-decoration: none;
+  z-index: 1;
+}
 
+.large-button::after {
+  content: '';
+  position: absolute;
+  background-color: hsl(var(--clr-white) / .15);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 500ms ease-in-out;
+}
 
+.large-button:hover::after,
+.large-button:focus::after {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.underline-indicators > *{
+  padding: var(--underline-gap, 1rem) 0;
+  border-bottom: 2px solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-bottom: 2px solid hsl(var(--clr-white) / .5);
+}
+
+.underline-indicators > .active {
+  border-bottom: 2px solid hsl(var(--clr-white) / 1);
+}
 
 
 
