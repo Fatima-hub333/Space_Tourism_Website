@@ -10,29 +10,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"rel="stylesheet">
   <!-- Custom CSS -->
-  <!-- <link rel="stylesheet" href="index.css"> -->
+  <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Space Toursim Website</title>
 </head>
-<body>
-  <header class="primary-header">
-    <div></div>
+<body class="home">
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="Space Tourism Logo" class="logo">
+    </div>
     <nav>
-      <ul>
-        <li><a href="#"><span>01</span>Active</a></li>
-        <li><a href="#"><span>01</span>Hovered</a></li>
-        <li><a href="#"><span>01</span>Idle</a></li>
+      <ul class="primary-navigation underline-indicators flex">
+        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2"href="index.html"><span>00</span>Home</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2"href="destination.html"><span>01</span>destination</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2"href="crew.html"><span>02</span>crew</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2"href="technology.html"><span>03</span>technology</a></li>
       </ul>
     </nav>
   </header>
-00 Home
-01 Destination
-02 Crew
-03 Technology
 
-So, you want to travel to Space
-Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
-
-Explore
+  <div class="grid-container">
+    <div>
+    <h1 class="text-accent letter-spacing-1 uppercase ff-sans-cond fs-500">So, you want to travel to 
+    <span class="fs-900 text-white ff-serif">Space</span></h1>
+    <p>Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</p>
+    </div>
+    
+    <div>
+      <a href="#" class="large-button uppercase ff-serif text-dark bg-white fs-600">Explore</a>
+    </div>
+  </div>
 
 
 

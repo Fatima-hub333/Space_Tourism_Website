@@ -98,7 +98,7 @@ textarea {
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html: :focus-within {
+  html:focus-within {
     scroll-behavior: auto;
   }
 
@@ -133,6 +133,20 @@ textarea {
   max-width: 80rem;
   margin-inline: auto;
   padding-inline: 2em;
+}
+
+.grid-container {
+  display: grid;
+  column-gap: var(--container-gap, 2rem);
+  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+}
+
+.grid-container > *:last-child {
+  grid-column: 3;
 }
 
 .sr-only {
@@ -205,7 +219,7 @@ textarea {
 /* Components */
 /* -------------------- */
 .large-button {
-  display: grid;
+  display: inline-grid;
   position: relative;
   padding: 0 2em;
   aspect-ratio: 1;
