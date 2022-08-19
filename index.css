@@ -371,13 +371,36 @@ textarea {
   }
 }
 
-@media (min-width: 35em) and (max-width: 45em) {
+@media (min-width: 35em) {
   .primary-navigation {
-    padding-inline: 3rem;
+    padding-inline: clamp(3rem, 7vw, 7rem);
   }
+}
 
+@media (min-width: 35em) and (max-width: 44.999em) {
   .primary-navigation a > span {
     display: none;
+  }
+}
+
+@media (min-width: 45em) {
+  .primary-header::after {
+    content: '';
+    display: block;
+    position: relative;
+    background: hsl( var(--clr-white) / .25);
+    height: 1px;
+    width: 100%;
+    order: 1;
+    margin-right: -2.5rem;
+  }
+
+  nav {
+    order: 2;
+  }
+
+  .primary-navigation {
+    margin-block: 2rem;
   }
 }
 
