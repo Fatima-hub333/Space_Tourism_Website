@@ -12,6 +12,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Space Toursim Website</title>
+  <!-- JS Link -->
+  <script src="index.js" defer></script>
+
 </head>
 <body class="home">
   <header class="primary-header flex">
@@ -20,7 +23,7 @@
     </div>
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"> <span class="sr-only" aria-expanded="false">Menu</span></button>
     <nav>
-      <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
         <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2"href="index.html"><span>00</span>Home</a></li>
         <li><a class="ff-sans-cond uppercase text-white letter-spacing-2"href="destination.html"><span>01</span>destination</a></li>
         <li><a class="ff-sans-cond uppercase text-white letter-spacing-2"href="crew.html"><span>02</span>crew</a></li>
@@ -41,8 +44,5 @@
     </div>
   </div>
 
-
-
-<script src="index.js"></script>
 </body>
 </html>
