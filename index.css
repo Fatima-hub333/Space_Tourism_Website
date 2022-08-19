@@ -253,6 +253,7 @@ textarea {
 /* Components */
 /* -------------------- */
 .large-button {
+  font-size: 2rem;
   display: inline-grid;
   position: relative;
   padding: 0 2em;
