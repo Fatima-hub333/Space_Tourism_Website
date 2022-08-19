@@ -8,19 +8,39 @@
   --clr-white: 0 0% 100%;
 
   /* Fonts Sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
-  --fs-300: 1rem;
-  --fs-200: 0.875rem;
+    --fs-900: clamp(5rem, 8vw + 1rem, 90.9375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1.75rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
 
   /* Font Families */
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+}
+/* 35em is equal to 560px */
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* 45em is for mobile */
+@media (min-width: 45em) {
+  :root {
+   /* Fonts Sizes */
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-400: 1.125rem;
+  }
 }
 
 /* ------------------ */
@@ -73,6 +93,8 @@ body {
   color: hsl(var(--clr-white));
   min-height: 100vh;
   line-height: 1.5;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 /* Reset List style */
@@ -125,6 +147,10 @@ textarea {
   gap: var(--gap, 1rem);
 }
 
+.d-block {
+  display: block;
+}
+
 .flow > * + *{
   margin-top: var(--flow-space, 1rem);
 }
@@ -136,17 +162,24 @@ textarea {
 }
 
 .grid-container {
+  border: 5px solid green;
   display: grid;
-  column-gap: var(--container-gap, 2rem);
-  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  
 }
 
-.grid-container > *:first-child {
-  grid-column: 2;
-}
-
-.grid-container > *:last-child {
+@media (min-width: 45em) {
+  .grid-container{
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  }
+  .grid-container > *:first-child {
+    grid-column: 2;
+    outline: 1px solid red;
+  }
+  .grid-container > *:last-child {
   grid-column: 3;
+  outline: 1px yellow solid;
+  }
 }
 
 .sr-only {
