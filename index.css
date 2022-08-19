@@ -292,11 +292,29 @@ textarea {
 }
 
 .primary-navigation {
-  --gap: 8rem;
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+  /* --gap: 8rem; */
+  flex-direction: column;
+  position: fixed;
+  background-color: black;
+  inset: 0 0 0 30%;
+  z-index: 1000;
+  --underline-gap: .5rem;
+  list-style: none;
+  padding: min(20rem, 15vh) 2rem;
+  margin: 0;
+  }
+
+  .primary-navigation.underline-indicators > .active{
+    border: 0;
+  }
 }
 
 .primary-navigation a {
