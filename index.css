@@ -36,10 +36,10 @@
 @media (min-width: 45em) {
   :root {
    /* Fonts Sizes */
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-400: 1.125rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
   }
 }
 
@@ -162,23 +162,24 @@ textarea {
 }
 
 .grid-container {
-  border: 5px solid green;
+  text-align: center;
+  border: 5px solid limegreen;
   display: grid;
-  
 }
 
 @media (min-width: 45em) {
-  .grid-container{
+  .grid-container {
+    text-align: left;
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
   }
   .grid-container > *:first-child {
     grid-column: 2;
     outline: 1px solid red;
   }
   .grid-container > *:last-child {
-  grid-column: 3;
-  outline: 1px yellow solid;
+    grid-column: 3;
+    outline: 1px yellow solid;
   }
 }
 
