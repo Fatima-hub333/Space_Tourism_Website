@@ -296,6 +296,8 @@ textarea {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: hsl( var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
 }
 
 @media (max-width: 35em) {
@@ -303,7 +305,6 @@ textarea {
   /* --gap: 8rem; */
   flex-direction: column;
   position: fixed;
-  background-color: black;
   inset: 0 0 0 30%;
   z-index: 1000;
   --underline-gap: .5rem;
