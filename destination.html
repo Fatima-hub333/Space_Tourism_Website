@@ -14,6 +14,7 @@
   <title>Frontend Mentor | Space Toursim Website</title>
   <!-- JS Link -->
   <script src="index.js" defer></script>
+  <script src="tabs.js" defer></script>
 
 </head>
 <body class="destination">
@@ -39,7 +40,7 @@
       <source srcset="./assets/destination/image-moon.webp" alt="type/webp">
       <img src="./assets/destination/image-moon.png" alt="The moon">
     </picture>
-    <picture hidden>
+    <!-- <picture hidden>
       <source srcset="./assets/destination/image-mars.webp" alt="type/webp">
       <img src="./assets/destination/image-mars.png" alt="The planet mars">
     </picture>
@@ -50,13 +51,13 @@
     <picture hidden>
       <source srcset="./assets/destination/image-titan.webp" alt="type/webp">
       <img src="./assets/destination/image-titan.png" alt="The planet titan">
-    </picture>
+    </picture> -->
 
-    <div class="tab-list underline-indicators flex">
-      <button area-selected="true" class="ff-sans-cond uppercase text-accent letter-spacing-2 ">moon</button>
-      <button area-selected="false" class="ff-sans-cond uppercase text-accent letter-spacing-2 ">ars</button>
-      <button area-selected="false" class="ff-sans-cond uppercase text-accent letter-spacing-2 ">europa</button>
-      <button area-selected="false" class="ff-sans-cond uppercase text-accent letter-spacing-2 ">titan</button>
+    <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
+      <button aria-selected="true" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0">Moon</button>
+      <button aria-selected="false" role="tab" aria-controls="mars-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Mars</button>
+      <button aria-selected="false" role="tab" aria-controls="europa-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Europa</button>
+      <button aria-selected="false" role="tab" aria-controls="titan-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Titan</button>
     </div>
     
     <!-- Moon -->
