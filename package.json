@@ -1,0 +1,27 @@
+{
+  "name": "space_tourism_website",
+  "version": "1.0.0",
+  "description": "It's a fully responsive Space Tourism website, created via using HTML/CSS advance components. Created via using GitHub workflow and linter checks. Main Topics cover in this website;\r 1- CSS Design System\r     -utility classes & custom properties\r 2- Flex Box & Grid\r 3- Accessibility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fatima-hub333/Space_Tourism_Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fatima-hub333/Space_Tourism_Website/issues"
+  },
+  "homepage": "https://github.com/Fatima-hub333/Space_Tourism_Website#readme",
+  "devDependencies": {
+    "hint": "^7.1.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
