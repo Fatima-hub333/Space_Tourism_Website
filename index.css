@@ -527,7 +527,6 @@ select {
 
 .grid-container--destination {
   --flow-space: 2rem;
-
   grid-template-areas:
     'title'
     'image'
@@ -560,7 +559,6 @@ select {
 
 .grid-container--crew {
   --flow-space: 2rem;
-
   grid-template-areas:
     'title'
     'image'
