@@ -655,7 +655,7 @@ select {
 
   .grid-container--crew > picture {
     grid-column: span 2;
-    align-self: end;
+     align-self: end;
     max-width: 90%;
   }
 }
