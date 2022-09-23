@@ -5,7 +5,7 @@ It's a fully responsive Space Tourism website, created via using HTML/CSS advanc
 2- Flex Box & Grid
 3- Accessibility
 
-<!-- ![screenshot](images/base/Capstone-1.png) -->
+![screenshot](space-tourism-preview.png)
 
 ## [LiveDemo] 
 (https://singular-bublanina-a57401.netlify.app/)
